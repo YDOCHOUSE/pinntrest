@@ -17,6 +17,7 @@ gem 'paperclip', '~> 4.2.0'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'searchkick'
 
 gem 'spring',        group: :development
 
