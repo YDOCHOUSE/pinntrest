@@ -7,3 +7,8 @@ $ ->
     $('#pins').masonry
       itemSelector: '.box'
       isFitWidth: true
+
+$ ->
+  $('#pin_search').typeahead
+    name: "pin"
+    remote: "/pins/autocomplete?query=%QUERY"

@@ -1,6 +1,10 @@
 = form_tag pins_path, class: "form-inline", method: :get do
-	= text_field_tag :query, params[:query], class: "form-control"
-	= submit_tag "Search", class: "btn btn-primary"
+	.input-group.input-group-lg
+		.input-group-btn
+			= link_to "clear", pins_path, class: "btn btn-default"
+		= text_field_tag :query, params[:query], class: "form-control", id: "pin_search", autocomplete: "off"
+		.input-group-btn
+			= submit_tag "Search", class: "btn btn-primary"
 
 #pins.transitions-enabled
 	- @pins.each do |pin|

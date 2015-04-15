@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   	member do
   		put "like", to: "pins#upvote"
   	end
-  end
+  	collection do
+  		get :autocomplete
+    end
+end
+
 
   root 'pins#index'
 end
