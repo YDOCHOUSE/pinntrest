@@ -44,10 +44,18 @@ class PinsController < ApplicationController
     redirect_to :back
   end
 
+  def tagged
+    if params[:tag].present?
+      @pins = Pin.tagged_with(params[:tag])
+    else
+      @pins = Pin.postall
+    end   
+  end
+
   private
 
   def pin_params
-  	params.require(:pin).permit(:title, :description, :image)
+  	params.require(:pin).permit(:title, :description, :image, :tag_list)
   end
 
   def find_pin
