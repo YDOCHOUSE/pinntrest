@@ -53,9 +53,9 @@ nav {
 	  	height: auto;
 	  }
 	  h2 {
-	  	font-size: 22px;
+	  	font-size: 20px;
 	  	margin: 0;
-	  	padding: 25px 10px;
+	  	padding: 5px 10px;
 	  	a {
 				color: #474747;
 	  	}
@@ -63,7 +63,7 @@ nav {
 	  .user {
 	  	font-size: 12px;
 	  	border-top: 1px solid #EAEAEA;
-			padding: 15px;
+			padding: 5px 15px 5px 15px;
 			margin: 0;
 	  }
 	}
@@ -115,3 +115,24 @@ nav {
 textarea {
 	min-height: 250px;
 }
+
+.navbar-form .inputgroup-lg {
+	width: 5px;
+}
+
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+  margin-left: 8px;
+  height: 35px;
+  padding: 5px 5px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.input-group-btn > .btn {
+  height: 35px;
+  padding: 5px 5px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+

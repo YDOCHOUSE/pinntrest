@@ -1,3 +1,18 @@
 // Place all the styles related to the Pins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pintrestlogo img {
+	width: 75px;
+	height: 75px;
+}
+
+#pins .box h2 {
+  font-size: 21px;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.input#pins_search.form-control.tt-query {
+	width: 5px;
+}

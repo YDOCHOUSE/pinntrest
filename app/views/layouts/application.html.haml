@@ -9,12 +9,19 @@
 %body
 	%nav.navbar.navbar-default
 		.container
-			.navbar-brand= link_to "Pinnterest", root_path
+			.navbar-brand= link_to image_tag('fakepin.png'), root_path, class: 'pintrestlogo'
+			= form_tag pins_path, class: "form-inline", method: :get do
+				.navbar-form.navbar-left
+					.input-group.input-group-lg
+						= text_field_tag :query, params[:query], class: "form-control", id: "pin_search", autocomplete: "off", placeholder: "Find Your Everything"
+						.input-group-btn
+							= submit_tag "Search", class: "btn btn-danger sb"
+							%span.glyphicon.glyphicon-search
 
 			- if user_signed_in?
 				%ul.nav.navbar-nav.navbar-right
 					%li= link_to "Pin Something!", new_pin_path
-					%li= link_to "Account", edit_user_registration_path
+					%li= link_to current_user.email, edit_user_registration_path
 					%li= link_to "Sign Out", destroy_user_session_path, method: :delete
 			- else
 				%ul.nav.navbar-nav.navbar-right
