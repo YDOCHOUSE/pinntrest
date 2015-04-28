@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: pinntrest_production
+  database: warm-ridge-3819
   username: pinntrest
   password: <%= ENV['PINNTREST_DATABASE_PASSWORD'] %>
